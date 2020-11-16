@@ -23,3 +23,13 @@
 #slider .slider_slide:nth-of-type(4){
     background:red;
 }
+
+
+
+.sidefeed-item{
+    width:90%;
+    margin-bottom:25px;
+}
+.sidefeed-item a{
+    color:#000;
+}
