@@ -1,0 +1,25 @@
+#slider{
+    width:75%;
+    min-width:350px;
+    height:60vmin;
+    position:relative;
+    margin-bottom:100px;
+    overflow:hidden;
+}
+
+#slider .slider_slide{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:black;
+}
+
+#slider .slider_slide:nth-of-type(2){
+    background:purple;
+}
+#slider .slider_slide:nth-of-type(3){
+    background:green;
+}
+#slider .slider_slide:nth-of-type(4){
+    background:red;
+}
