@@ -30,7 +30,9 @@ export default function DynamicPostsSide() {
 
   const loadedPosts = data.map((item, index) => {
   return <article key={index} className='sidefeed-item'>
+  <div className='feed-logo'></div>
   <a href={item.link}>{item.title}</a>
+  <p></p>
   </article>;
   });
 

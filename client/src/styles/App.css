@@ -1,3 +1,9 @@
+
+:root{
+    --brand-color:#0484ec;
+}
+
+
 *{
     margin: 0;
     padding:0;
@@ -10,7 +16,8 @@
 
 a{
     text-decoration:none;
-    color:#fff;
+    color:#000;
+    transition:color 0.2s ease;
 }
 
 body{
@@ -44,16 +51,23 @@ nav ul{
     height:100%;
 }
 
-ul li{
+nav ul li{
     display:flex;
     justify-content: center;
     width:calc(100% / 4);
 }
 
+nav ul li a{
+    color:#fff;
+}
+
 .logo-small{
     width:10vmin;
     height:10vmin;
-    background:white;
+    background-image:url('./Home/pictures/aequicens-logo.png');
+    background-size:90%; 
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .box{
@@ -92,6 +106,7 @@ ul li{
     align-items:center;
     height:auto;
     min-height:100vmin;
+    padding-top:50px;
     border:1px solid;
 }
 
@@ -102,3 +117,17 @@ ul li{
     width:calc(61.8% - 50px);
 }
 
+@media screen and (hover:hover){
+    a:hover{
+      color:var(--brand-color);
+    }
+}
+
+@media screen and (max-width:720px) {
+  .column{
+      width:100% !important;
+  }
+  .column.small{
+      margin-top:100px;
+  }
+}

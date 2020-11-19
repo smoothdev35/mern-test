@@ -32,7 +32,7 @@ export default function Slider() {
     let tl = gsap.timeline({ repeat: -1 }).pause();
     setTimeout(() => {
       tl.to(".slider_slide", {
-        duration: 6,
+        duration: 4,
         x: "-=" + (baseWidth + wrapWidth),
         ease: "none",
         modifiers: {
@@ -41,28 +41,28 @@ export default function Slider() {
       }).play();
 
       //Following statements add several pauses to the timeline so the individual items stay in screen for 1 second before resuming the animation.
-      tl.addPause(1.5, () => {
+      tl.addPause(1, () => {
         setTimeout(() => {
           tl.play();
-        }, 1500);
+        }, 2000);
+      });
+
+      tl.addPause(2, () => {
+        setTimeout(() => {
+          tl.play();
+        }, 2000);
       });
 
       tl.addPause(3, () => {
         setTimeout(() => {
           tl.play();
-        }, 1500);
+        }, 2000);
       });
 
-      tl.addPause(4.5, () => {
+      tl.addPause(4, () => {
         setTimeout(() => {
           tl.play();
-        }, 1500);
-      });
-
-      tl.addPause(6, () => {
-        setTimeout(() => {
-          tl.play();
-        }, 1500);
+        }, 2000);
       });
     }, 2000);
   }, []);
